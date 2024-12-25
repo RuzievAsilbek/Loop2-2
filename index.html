@@ -3,20 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trasform</title>
+  <title>Loop2-2</title>
 
     <!-- STYLE -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="main-content wall">
-    <div class="rom">
-      <div class="tabaqa tabaqa-lift"></div>
-      <div class="tabaqa tabaqa-right"></div>
-    </div>
-  </main>
 
+  <div class="main-content">
+    <div class="container">
+
+      <div class="profile-settings">
+        <form class="profile-settings-form" action="https://echo.htmlacademy.ru" method="post">
+          <header class="profile-settings-header">
+            <h1 class="profile-settings-title">Account settings</h1>
+            <a class="profile-settings-clone-link" href="#">
+              <img src="img/close-icon.svg" alt="Close" width="24" height="24">
+            </a>
+          </header>
+
+          <div class="profile-settings-form-body">
+            <img class="profile-settings-form-avatar" src="img/avatar.jpg" alt="Profile img" width="60" height="60">
+            <div class="profile-settings-form-group">
+              <label class="profile-settings-form-label" for="profile-settings-form-username">Username</label>
+              <input class="profile-settings-form-field" type="text" name="username" id="profile-settings-form-input" placeholder="Inter your name" required>
+            </div>
+            <div class="profile-settings-form-row">
+              <div class="profile-settings-form-group">
+                <label class="profile-settings-form-label" for="profile-settings-form-first-name">First name</label>
+                <input class="profile-settings-form-field" type="text" name="first_name" id="profile-settings-form-input" placeholder="Inter your first name" required>
+              </div>
+              <div class="profile-settings-form-group">
+                <label class="profile-settings-form-label" for="profile-settings-form-last-name">Last name</label>
+                <input class="profile-settings-form-field" type="text" name="last_name" id="profile-settings-form-input" placeholder="Inter your last name" required>
+            </div>
+            </div><div class="profile-settings-form-group">
+              <label class="profile-settings-form-label" for="profile-settings-form-email">Email</label>
+              <input class="profile-settings-form-field" type="email" name="email" id="profile-settings-form-input" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="Inter your email" required>
+            </div>
+            <div class="profile-settings-form-group">
+              <label class="profile-settings-form-label" for="profile-settings-form-bio">Bio</label>
+              <textarea class="profile-settings-form-field profile-settings-form-field-textarea" name="bio" id="profile-settings-form-bio-textarea" placeholder="Tell us yourself" required></textarea>
+            </div>
+          </div>
+
+          <footer class="profile-settings-form-actions">
+            <button class="profile-settings-form-action" type="button">Cancel</button>
+            <button class="profile-settings-form-action" type="submit">Save</button>
+          </footer>
+        </form>
+      </div>
+
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

@@ -20,7 +20,7 @@ body {
   line-height: 1.5;
   font-family: "Arial", sans-serif;
   height: 100%;
-  background-color: #fff;
+  background-color: #222;
   color: #222;
 }
 
@@ -43,48 +43,119 @@ img {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.wall {
+.profile-settings {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(236, 203, 21);
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+}
+
+
+
+.profile-settings-form {
+}
+.profile-settings-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 40px;
   align-items: center;
-  background-image: url(/img/Wall.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+.profile-settings-title {
+  margin: 0;
+  font-size: 20px;
 }
 
-.rom {
+.profile-settings-clone-link {
   display: flex;
-  border: 20px ridge rgb(221, 91, 15);
-  box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.8);
-  background-image: url(/img/interior.jpg);
-  background-size: cover;
-  background-position: center center;
 }
 
-.tabaqa {
-  width: 150px;
-  height: 300px;
-  border: 20px ridge rgb(221, 91, 15);
-  background-color: rgb(0, 0, 0, 0.6);
-  transition: transform 1s ease;
+.profile-settings-form-body {
+  position: relative;
+  left: 40px;
+  padding: 40px 30px;
+  background-color: #fff;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
 }
 
-
-.tabaqa-lift {
-  transform-origin: left center;
+.profile-settings-form-avatar {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
-.tabaqa-right {
-  transform-origin: right center;
+.profile-settings-form-row {
+  display: flex;
 }
 
-
-.rom:hover .tabaqa-lift {
-  transform: perspective(2000px) rotateY(-125deg);
+.profile-settings-form-row:not(:last-child) {
+  margin-bottom: 24px;
 }
 
-.rom:hover .tabaqa-right {
-  transform: perspective(2000px) rotateY(125deg);
+.profile-settings-form-row .profile-settings-form-group {
+  width: 50%;
+  margin-bottom: 0;
+}
+
+.profile-settings-form-group {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.profile-settings-form-group:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.profile-settings-form-label {
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.profile-settings-form-field {
+  display: block;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 0;
+  border-bottom: 1px solid #555;
+}
+.profile-settings-form-field-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.profile-settings-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
+  align-items: center;
+}
+.profile-settings-form-action {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.profile-settings-form-action:not(:last-child) {
+  margin-right: 40px;
+}
+
+.profile-settings-form-action:hover {
+  opacity: 0.8;
+}
+
+.profile-settings-form-action:active {
+  opacity: 0.6;
 }
